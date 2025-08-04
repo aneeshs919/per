@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import SplashCursor from "./components/SplashCursor";
 import Header from "./components/common/Header";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -30,7 +29,6 @@ export default function RootLayout({
       <body
         className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`}
       >
-        <SplashCursor />
         <Header />
         {children}
       </body>

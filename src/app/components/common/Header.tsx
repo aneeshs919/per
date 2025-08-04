@@ -18,13 +18,13 @@ const Header = () => {
           <div className="flex gap-4">
             {NAV_LINKS.map((link) => (
               <Link
-                className="w-6 h-6 flex items-center justify-center"
+                className="w-8 h-8 flex items-center justify-center"
                 key={link.href}
                 href={link.href}
               >
                 <FontAwesomeIcon
                   icon={icons[link.icon as keyof typeof icons]}
-                  className="hover:text-black"
+                  className="hover:text-[#8c49e7] text-[30px]"
                 />
               </Link>
             ))}
