@@ -84,7 +84,7 @@ const UserDetails = () => {
 
 const Details = () => {
   const note = `I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.`;
-  const title = `Let's Work Together`;
+  const title = `Let's Work Together!`;
   return (
     <div
       className={`p-8 pb-6 w-full flex flex-col flex-1 justify-end ${pattern}`}
