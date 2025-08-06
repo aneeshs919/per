@@ -13,6 +13,7 @@ const pattern = `
   bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
   bg-[size:10px_10px]
   bg-fixed
+  animate-pattern-move
   [--pattern-fg:var(--color-white)]/10
 `;
 const HomePage = () => {
@@ -20,7 +21,7 @@ const HomePage = () => {
     <>
       <BoxAlign className="w-full max-w-[800px] mx-auto flex flex-col md:flex-row items-center md:items-center justify-between">
         <BoxAlign brX className="p-4 flex flex-col gap-4 items-center">
-          <div className="rounded-full p-2 w-[160px] h-[160px] md:border-[2px] md:border-[#222]">
+          <div className="relative rounded-full p-2 w-[160px] h-[160px] md:border-[2px] md:border-[#222] glare-effect overflow-hidden">
             <Image
               className="rounded-full"
               src="/photo1.jpeg"
@@ -37,15 +38,15 @@ const HomePage = () => {
       <BoxAlign className={`h-10 ${pattern}`}>
         <div className="h-full w-full" />
       </BoxAlign>
-      <BoxAlign
+      {/* <BoxAlign
         brX
         className=" p-4 w-full max-w-[800px] mx-auto flex justify-between"
       >
         <Self />
-      </BoxAlign>
-      <BoxAlign className={`h-10 ${pattern}`}>
+      </BoxAlign> */}
+      {/* <BoxAlign className={`h-10 ${pattern}`}>
         <div className="h-full"></div>
-      </BoxAlign>
+      </BoxAlign> */}
       <BoxAlign
         brX
         className=" p-4 w-full max-w-[800px] mx-auto flex justify-between"
@@ -89,7 +90,9 @@ const Details = () => {
     <div
       className={`p-8 pb-6 w-full flex flex-col flex-1 justify-end ${pattern}`}
     >
-      <p className="text-2xl font-bold">{title}</p>
+      <p className="text-4xl mb-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500">
+        {title}
+      </p>
       <p className="text-body">{note}</p>
       <div className="mt-4 flex">
         <a
