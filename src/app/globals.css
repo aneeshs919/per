@@ -14,7 +14,7 @@
     }
   }
 
-  --animate-glassy: glassy 2s ease-in-out infinite;
+  --animate-glassy: glassy 2s ease-in-out ease-in;
 
   @keyframes glassy {
     0% {
@@ -75,7 +75,7 @@
     rgba(255, 255, 255, 0) 60%
   );
   transform: rotate(0deg) translateX(-100%);
-  animation: glare 5s infinite;
+  animation: glare 5s ease-in-out;
   pointer-events: none;
 }
 
@@ -118,4 +118,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-ibm-plex-sans);
+}
+
+.background {
+  background: url('/bg.webp') center center/cover no-repeat;
 }

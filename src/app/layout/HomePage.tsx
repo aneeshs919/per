@@ -8,6 +8,7 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import Button from "../components/Button";
 
 const pattern = `
   bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
@@ -71,8 +72,8 @@ const HomePage = () => {
 
 const UserDetails = () => {
   const name = "Aneesh S";
-  const role = "Frontend Developer, Product Designer";
-  const location = "Bangalore, India";
+  const role = "Frontend Developer, UX Designer";
+  const location = "Based in Bangalore";
 
   return (
     <div className="text-center">
@@ -83,9 +84,11 @@ const UserDetails = () => {
   );
 };
 
+
+
 const Details = () => {
-  const note = `I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.`;
-  const title = `Let's Work Together!`;
+  const note = `I create clean, efficient code and visually striking interfaces that deliver seamless, intuitive user experiences. Passionate about transforming ideas into interactive designs that connect, inspire, and engage.`;
+  const title = `Create. Build. Inspire.`;
   return (
     <div
       className={`p-8 pb-6 w-full flex flex-col flex-1 justify-end ${pattern}`}
@@ -95,13 +98,15 @@ const Details = () => {
       </p>
       <p className="text-body">{note}</p>
       <div className="mt-4 flex">
-        <a
+      <Button href="/Aneesh_resume.pdf">Download CV</Button>
+
+        {/* <a
           download
           href="/Aneesh_resume.pdf"
-          className="bg-[#8c49e7] hover:bg-[#6c3be7] text-[#fff] rounded-md p-2 px-4 flex-grow-0"
+          className="bg-[#8c49e7] hover:bg-[#6c3be7] text-[#fff] rounded-md p-2 px-4 flex-grow-0 backdrop-blur-md"
         >
           Download CV
-        </a>
+        </a> */}
       </div>
     </div>
   );
@@ -176,7 +181,6 @@ environments.`;
 
 const Skills = () => {
   const skills = {
-    Languages: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Dart"],
     "Web Stack": [
       "React.js",
       "Next.js",
@@ -188,6 +192,14 @@ const Skills = () => {
       "Bootstrap",
       "CSS Modules",
     ],
+    Languages: 
+    [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Dart",
+    ],
+   
     "Mobile Stack": ["React Native", "Flutter", "Firebase", "Expo"],
     "State Management": ["Redux", "Zustand", "Context API", "React Hooks"],
     "APIs & Auth": [

@@ -10,6 +10,20 @@ const Header = () => {
     Github: faGithub,
     Linkedin: faLinkedin,
   };
+
+  function isSorted(nums: number[]) {
+    console.log("nums", nums);
+    for (let i = 0; i <= nums.length; i++) {
+      console.log("nums[i]", nums[i], nums[i + 1]);
+
+      if(nums[i] > nums[i + 1]) return false;
+      // if(nums[i] <= nums[i+1])
+    }
+    return true;
+  }
+
+  console.log("isSorted([1, 2, 3, 4, 5]);", isSorted([1, 2, 1, 4, 5]));
+
   return (
     <BoxAlign className="mt-4">
       <header className="max-w-[800px] mx-auto">
